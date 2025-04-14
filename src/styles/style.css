@@ -24,7 +24,13 @@ body {
 }
 
 .logo {
-  width: 50%;
+  padding: 15px;
+  border: #000 solid 1px;
+  font-size: 2rem;
+}
+
+.span__logo {
+  font-size: 2.5rem;
 }
 
 .nav {
@@ -70,16 +76,20 @@ body {
 }
 
 .main__text {
-  padding: 20px;
+  padding: 20px 30px;
   border: 1px solid black;
-  width: 30%;
+  width: 40%;
   height: 100%;
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+
+.main__text__strong {
+  font-weight: bolder;
 }
 
 .contenedor__img {
-  width: 70%;
+  width: 60%;
   padding: 20px 0px;
   border: 1px solid black;
   display: flex;
@@ -88,5 +98,9 @@ body {
 
 .img__main {
   width: 60%;
-  transform: rotateY(180deg);
+  transition: transform 1s linear;
+}
+
+.desplazar {
+  transform: translateX(-80%);
 }
