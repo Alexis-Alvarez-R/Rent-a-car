@@ -16,73 +16,89 @@
     <form action="" id="formulario-registro">
       <h3>Registrar Usuario</h3>
 
-      <label for="nombre_usuario">Nombre Usuario</label>
-      <input
-        type="text"
-        id="nombre_usuario"
-        name="nombreUsuario"
-        maxlength="30"
-        minlength="5"
-        required
-      />
+      <div class="input-box">
+        <label for="nombre_usuario">Nombre Usuario</label>
+        <input
+          type="text"
+          id="nombre_usuario"
+          name="nombreUsuario"
+          maxlength="30"
+          minlength="5"
+          required
+        />
+      </div>
 
-      <label for="primer_nombre">Nombre</label>
-      <input
-        type="text"
-        id="primer_nombre"
-        name="primerNombre"
-        maxlength="30"
-        required
-      />
+      <div class="input-box">
+        <label for="primer_nombre">Nombre</label>
+        <input
+          type="text"
+          id="primer_nombre"
+          name="primerNombre"
+          maxlength="30"
+          required
+        />
+      </div>
 
-      <label for="primer_apellido">Apellido</label>
-      <input
-        type="text"
-        id="primer_apellido"
-        name="primerApellido"
-        maxlength="30"
-        required
-      />
+      <div class="input-box">
+        <label for="primer_apellido">Apellido</label>
+        <input
+          type="text"
+          id="primer_apellido"
+          name="primerApellido"
+          maxlength="30"
+          required
+        />
+      </div>
 
-      <label for="correo">Correo</label>
-      <input
-        type="text"
-        id="correo"
-        name="correoElectronico"
-        maxlength="30"
-        required
-      />
+      <div class="input-box">
+        <label for="correo">Correo</label>
+        <input
+          type="text"
+          id="correo"
+          name="correoElectronico"
+          maxlength="30"
+          required
+        />
+      </div>
 
-      <label for="contraseña">contraseña</label>
-      <input
-        type="password"
-        id="contrasena"
-        name="contrasena"
-        maxlength="18"
-        minlength="10"
-        required
-      />
+      <div class="input-box">
+        <label for="contraseña">contraseña</label>
+        <input
+          type="password"
+          id="contrasena"
+          name="contrasena"
+          maxlength="18"
+          minlength="10"
+          required
+        />
+      </div>
 
-      <label for="direccion">Direccion</label>
-      <input
-        type="text"
-        id="direccion"
-        name="direccion"
-        maxlength="200"
-        required
-      />
+      <div class="input-box">
+        <label for="direccion">Direccion</label>
+        <input
+          type="text"
+          id="direccion"
+          name="direccion"
+          maxlength="200"
+          required
+        />
+      </div>
 
-      <label for="cedula">Cedula</label>
-      <input
-        type="text"
-        id="cedula"
-        name="cedula"
-        placeholder="001-010101-0101A"
-        required
-      />
+      <div class="input-box">
+        <label for="cedula">Cedula</label>
+        <input
+          type="text"
+          id="cedula"
+          name="cedula"
+          placeholder="001-010101-0101A"
+          required
+        />
+      </div>
 
-      <label for="select">Selecciona tu ciudad</label>
-      <select name="departamento" id="select"></select>
+      <div class="input-box">
+        <label for="select">Selecciona tu ciudad</label>
+        <select name="departamento" id="select"></select>
+      </div>
 
       <button id="enviar-form" type="submit">Enviar</button>
     </form>

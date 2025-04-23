@@ -1,6 +1,9 @@
-
 :root{
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    --color-body: #023047;
+    --color-form: #ebe0d359;
+    --color-button: #c7cbd8;
 }
 *{
     margin: 0;
@@ -9,19 +12,18 @@
 }
 
 body{
-    background-color: #242424;
+    background-color: var(--color-body);
     color: rgba(255, 255, 255, 0.87);
     font-weight: 600;
 }
 
 #form-iniciar-sesion{
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 36%;
-    min-width: 400px;
+    width: 80%;
+    max-width: 500px;
     min-height: 200px;
     padding: 24px 48px;
     display: flex;
@@ -29,7 +31,9 @@ body{
     align-items: start;
     gap: 20px;
     border: solid white 3px;
-    background-color: #303030;
+    background-color: var(--color-form);
+
+    color: rgb(255, 255, 255);
     border-radius: 14px;
 
 }
@@ -56,6 +60,11 @@ label{
     justify-content: start;
     gap: 20px;
 
+    button{
+        border: none;
+        box-shadow: none;
+    }
+
     button, a{
         display: flex;
         justify-content: center;
@@ -65,7 +74,50 @@ label{
         width: 50%;
         height: 60%;
         border-radius: 8px;
-        background-color: rgb(207, 201, 199);
-        overflow: hidden;
+        background-color: var(--color-button);
+        font-weight: 700;
+        font-size: 18px;
+
+        transition: all 0.2s ease-out;
+
+
+        &:hover{
+            background-color: aliceblue;
+            box-shadow: 2px 3px 6px 3px rgb(75, 75, 75);
+
+        }
+
+
     }
+  }
+
+
+  @media(max-width: 880px){
+
+    /* Lo vi muy bien en tablet con las medidas anteriores, no amerita nada */
+  }
+
+
+  @media(max-width: 480px){
+
+
+    #form-iniciar-sesion{
+        padding: 18px;
+    }
+
+    h3{
+        font-size: 28px;
+    }
+
+
+    #buttons-opciones{
+        height: 70px;
+
+
+        
+    button, a{
+        font-size: 14px;
+    }
+    }
+
   }

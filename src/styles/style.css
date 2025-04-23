@@ -127,11 +127,15 @@ body {
   color: #FFB703;
 }
 
+
 .contenedor__carrucel {
   width: 700px;
   height: 400px;
   overflow: hidden;
+
+  /* EL problemita */
   background-image: url("../assets/image/fondo_carretera.webp");
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -206,6 +210,7 @@ body {
 
   .section__titulo {
     font-size: 1.3rem;
+    text-align: center;
   }
 
   .section__parrafo {
@@ -361,6 +366,23 @@ body {
   }
 
 
+  /* padding sintetico */
+  .contenedor__carrucel{
+    width: 96%;
+  }
+
+    /* Esperando revision por parte de la junta */
+  .slider__section {
+    display: flex;
+    justify-content: center;
+
+    .img__carrucel {
+      width: 110%;
+      object-fit: contain;
+    }
+  }
+
+
    .section{
     height: auto;
     flex-direction: column;
@@ -425,7 +447,6 @@ body {
 
     .horario__titulo{
       gap: 12px;
-      font-size: 4rem;
 
       .horario__icono{
         width: 30px;
@@ -486,13 +507,18 @@ body {
 
     li{
       width: 100%;
-      color: white;
-      transition: all 0.3s ease-in-out;
+      a{
+        display: block;
+        text-decoration: none;
+        width: 100%;
+        color: white;
+        transition: all 0.3s ease-in-out;
 
-      &:hover{
-        padding: 10px;
-        background-color: #363636;
-        font-size: 18px;
+        &:hover{
+          padding: 10px;
+          background-color: #363636;
+          font-size: 18px;
+        }
       }
     }
   }
@@ -502,13 +528,59 @@ body {
   .main__text{
     font-size: 1.3rem;
   }
-  /* .contenedor__carrucel{
-    padding: 0px 40px;
-  } */
-  .slider__section{
-    padding: 10px 40px;
+
+
+  .question{
+    font-size: 1.2rem;
   }
-  .contenedor__carrucel{
+
+
+  .section{
+    padding: 10px 24px;
+  }
+
+  .section__article{
+
+    .section__titulo{
+      font-size: 1.5rem;
+    }
+    .section__parrafo{
+      font-size: 1.2rem;
+    }
+  }
+
+
+  .footer{
+    flex-direction: column;
+  }
+
+  .footer__redes{
+    width: 100%;
+    align-items: start;
+    border-bottom: solid black 1px;
+
+    .redes__titulo{
+      width: 100%;
+      text-align: center;
+    }
+
+    .redes__iconos{
+      width: 100%;
+    }
+  }
+
+  .footer__contacto{
+    width: 100%;
+    border-bottom: solid black 1px;
+
+  }
+
+
+
+  .section__horario{
+    width: 100%;
+    align-items: center;
+
   }
 
   
