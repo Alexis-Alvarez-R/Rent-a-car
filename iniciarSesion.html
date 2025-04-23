@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/iniciar_sesion.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      id="form-iniciar-sesion"
+      action="http://localhost:3000/iniciarSesion"
+      method="post"
+    >
+      <h3>Iniciar sesion</h3>
+      <label for="usuario">Ingrece su usuario</label>
+      <input type="text" id="usuario" name="nombreUsuario" />
+
+      <label for="contraseña">Ingrese contraseña</label>
+      <input type="password" id="contraseña" name="contrasena" />
+      <nav id="buttons-opciones">
+        <button>Ingresar</button>
+        <a href="./registrar.html">Registrarse</a>
+      </nav>
+    </form>
+  </body>
+</html>

@@ -2,15 +2,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 :root {
-  --colorBody: #5e6472;
-  --colorHeader: #cacfd6;
-  --colorHeaderLetra: #2b2d42;
+  /* --colorBody: #5e6472; */
+  --colorIconoSection: brightness(0) saturate(100%) invert(23%) sepia(6%) saturate(17%) hue-rotate(66deg) brightness(97%) contrast(104%);
+  --colorBody: #575656;
+  --colorHeader: #FB8500;
+  --colorLetra: #363636;
+  --colorHeaderLetra: #023047;
   /*Cambia el color de los SVG*/
-  --colorIconoHeader: invert(11%) sepia(8%) saturate(4034%) hue-rotate(197deg)
-    brightness(92%) contrast(81%);
+  --colorIconoHeader: brightness(0) saturate(100%) invert(13%) sepia(17%) saturate(6428%) hue-rotate(176deg) brightness(96%) contrast(98%);
 }
 
 body {
@@ -19,12 +22,12 @@ body {
 }
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 10px 30px;
-  margin-bottom: 20px;
   background-color: var(--colorHeader);
 }
 
@@ -41,11 +44,19 @@ body {
 
 .nav {
   width: 65%;
+  gap: 17px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   padding: 10px;
+}
+
+#btn-menu{
+  display: none;
+}
+#menu{
+  display: none;
 }
 
 .link__nav {
@@ -77,6 +88,7 @@ body {
 }
 
 .link__social__media {
+
   .social__icon {
     width: 50px;
     height: 50px;
@@ -112,13 +124,17 @@ body {
 
 .main__text__strong {
   font-weight: 700;
-  color: #2b2d42;
+  color: #FFB703;
 }
 
 .contenedor__carrucel {
   width: 700px;
   height: 400px;
   overflow: hidden;
+  background-image: url("../assets/image/fondo_carretera.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   box-shadow: 2px 2px 12px rgba(50, 50, 50, 0.3);
   border-radius: 8px;
 }
@@ -152,15 +168,16 @@ body {
 .section {
   width: 100%;
   height: 400px;
-  padding: 10px;
+  padding: 10px 48px;
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 10px;
+  gap: 30px;
   margin-bottom: 20px;
 }
 
 .section__article {
+  background-color: #FFB703;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -169,15 +186,22 @@ body {
   height: 100%;
   width: calc(100% / 3);
   padding: 20px;
-  color: var(--colorHeader);
-  outline: auto;
+  color: var(--colorLetra); 
+  border-radius: 19px;
+  transition: box-shadow 0.2s ease-in, filter 0.2s ease-in, scale 0.2s ease-in;
+
+  &:hover{
+    box-shadow: -2px 3px 10px 4px black;
+    filter: brightness(110%);
+    scale: 98%;
+  }
+
 
   .section__img {
     height: 150px;
     width: 150px;
     object-fit: contain;
-    filter: invert(89%) sepia(0%) saturate(341%) hue-rotate(274deg)
-      brightness(97%) contrast(100%); /*Cambia el color de los SVG*/
+    filter: var(--colorIconoSection); /*Cambia el color de los SVG*/
   }
 
   .section__titulo {
@@ -193,24 +217,22 @@ body {
 
 .footer {
   width: 100%;
+  padding: 20px 10px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   background-color: var(--colorHeader);
 }
 
 .footer__redes {
   padding: 10px;
-
   display: flex;
-  flex-direction: flex-start;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   gap: 30px;
 
   .redes__titulo {
     color: var(--colorHeaderLetra);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-decoration: underline;
     text-decoration-color: var(--colorHeaderLetra);
   }
@@ -235,10 +257,9 @@ body {
 }
 
 .footer__contacto {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 20px;
 
@@ -249,7 +270,7 @@ body {
 
     .telefono__titulo {
       color: var(--colorHeaderLetra);
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
     .telefono__icono {
       width: 50px;
@@ -266,17 +287,16 @@ body {
     h5 {
       color: var(--colorHeaderLetra);
       margin-bottom: 15px;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
   }
 }
 
 .section__horario {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 30px;
 
   .horario__titulo {
@@ -291,10 +311,205 @@ body {
       object-fit: contain;
       filter: var(--colorIconoHeader);
     }
+    .horario__h5{
+      font-size: 1.5rem;
+      color: var(--colorHeaderLetra);
+    }
   }
 
   .horario__text {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: var(--colorHeaderLetra);
   }
+}
+
+
+
+
+@media(max-width: 888px){
+
+  .logo{
+    font-size: 1.2rem;
+  }
+  .span__logo{
+    font-size: 1.7rem;
+  }
+
+  .nav{
+    gap: 6px;
+  }
+
+  .link__nav{
+    font-size: 1rem;
+  }
+
+  .link__social__media{
+
+    .social__icon{
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .main{
+    flex-direction: column;
+  }
+
+  .main__text{
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+
+   .section{
+    height: auto;
+    flex-direction: column;
+   }
+
+
+   .section__article{
+    width: 100%;
+
+    .section__titulo{
+      font-size: 1.9rem;
+    }
+     .section__parrafo{
+      font-size: 1.6rem;
+     }
+   }
+
+
+
+   .footer{
+    gap: 20px;
+   }
+
+   .footer__redes{
+
+     .redes__titulo{
+       font-size: 1.3rem;
+     }
+     .redes__iconos{
+       gap: 15px;
+ 
+       img{
+         width: 30px;
+         height: 30px;
+       }
+     }
+   }
+
+
+   .footer__contacto{
+
+    .section__telefono{
+
+      .telefono__titulo{
+        font-size: 1.3rem;
+      }
+      .telefono__icono{
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .contenedor__telefonos{
+      h5{
+        font-size: 1rem;
+      }
+    }
+
+   }
+
+   .section__horario{
+    gap: 15px;
+
+    .horario__titulo{
+      gap: 12px;
+      font-size: 4rem;
+
+      .horario__icono{
+        width: 30px;
+        height: 30px;
+      }
+      .horario__h5{
+        font-size: 1.3rem;
+      }
+    }
+    .horario__text{
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+   }
+
+
+   .footer__redes, .footer__contacto, .section__horario{
+    width: calc(100% / 3);
+   }
+
+
+}
+
+@media(max-width: 479px){
+
+  .logo{
+    width: 60%;
+    font-size: 1.7rem;
+  }
+  .span__logo{
+    font-size: 1.9rem;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  #btn-menu{
+    display: block;
+  }
+
+  #menu{
+    padding: 10px 30px;
+    width: 100%;
+    min-height: 200px;
+    background-color: rgb(70, 70, 70);
+  }
+  #menu__ul{
+    padding: 10px;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    list-style: none;
+
+    li{
+      width: 100%;
+      color: white;
+      transition: all 0.3s ease-in-out;
+
+      &:hover{
+        padding: 10px;
+        background-color: #363636;
+        font-size: 18px;
+      }
+    }
+  }
+
+
+
+  .main__text{
+    font-size: 1.3rem;
+  }
+  /* .contenedor__carrucel{
+    padding: 0px 40px;
+  } */
+  .slider__section{
+    padding: 10px 40px;
+  }
+  .contenedor__carrucel{
+  }
+
+  
 }

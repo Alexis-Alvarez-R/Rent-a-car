@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/registrar.css" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <dialog id="dialog">
+      <img src="" alt="" id="dialog__img" />
+      <p id="dialog__p"></p>
+      <button id="cerrar-dialog" class="btn-dialog">Cerrar</button>
+    </dialog>
+
+    <form action="" id="formulario-registro">
+      <h3>Registrar Usuario</h3>
+
+      <label for="nombre_usuario">Nombre Usuario</label>
+      <input
+        type="text"
+        id="nombre_usuario"
+        name="nombreUsuario"
+        maxlength="30"
+        minlength="5"
+        required
+      />
+
+      <label for="primer_nombre">Nombre</label>
+      <input
+        type="text"
+        id="primer_nombre"
+        name="primerNombre"
+        maxlength="30"
+        required
+      />
+
+      <label for="primer_apellido">Apellido</label>
+      <input
+        type="text"
+        id="primer_apellido"
+        name="primerApellido"
+        maxlength="30"
+        required
+      />
+
+      <label for="correo">Correo</label>
+      <input
+        type="text"
+        id="correo"
+        name="correoElectronico"
+        maxlength="30"
+        required
+      />
+
+      <label for="contraseña">contraseña</label>
+      <input
+        type="password"
+        id="contrasena"
+        name="contrasena"
+        maxlength="18"
+        minlength="10"
+        required
+      />
+
+      <label for="direccion">Direccion</label>
+      <input
+        type="text"
+        id="direccion"
+        name="direccion"
+        maxlength="200"
+        required
+      />
+
+      <label for="cedula">Cedula</label>
+      <input
+        type="text"
+        id="cedula"
+        name="cedula"
+        placeholder="001-010101-0101A"
+        required
+      />
+
+      <label for="select">Selecciona tu ciudad</label>
+      <select name="departamento" id="select"></select>
+
+      <button id="enviar-form" type="submit">Enviar</button>
+    </form>
+
+    <script type="module" src="./JS/Registrar/main.js"></script>
+  </body>
+</html>
