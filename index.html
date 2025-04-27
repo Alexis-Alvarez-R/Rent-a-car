@@ -8,50 +8,7 @@
   </head>
 
   <body>
-    <header class="header">
-      <h1 class="logo"><span class="span__logo">Rent</span> a car</h1>
-
-      <nav class="nav">
-        <a href="#" class="link__nav">Inicio</a>
-        <a href="./Html/Vehiculos.html" class="link__nav" target="_blank"
-          >Vehiculos</a
-        ><a href="#" class="link__nav">Nosotros</a>
-        <a href="./Html/iniciarSesion.html" class="link__nav">Registrarte</a>
-        <div class="social__media">
-          <a href="#" class="link__social__media"
-            ><img
-              src="../src/assets/icons/facebook.svg"
-              alt="icono de facebook"
-              class="social__icon"
-          /></a>
-          <a href="#" class="link__social__media"
-            ><img
-              src="../src/assets/icons/instagram.svg"
-              alt="icono de instagram"
-              class="social__icon"
-          /></a>
-          <a href="#" class="link__social__media"
-            ><img
-              src="../src/assets/icons/github.svg"
-              alt="icono de github"
-              class="social__icon"
-          /></a>
-        </div>
-      </nav>
-
-      <buttton id="btn-menu">
-        <img src="../src/assets/icons/menu.svg" alt="" class="img-menu-btn" />
-      </buttton>
-    </header>
-
-    <div id="menu">
-      <ul id="menu__ul">
-        <li><a href="">Inicio</a></li>
-        <li><a href="">Vehiculos</a></li>
-        <li><a href="">Nosotros</a></li>
-        <li><a href="./iniciarSesion.html">Registrarse</a></li>
-      </ul>
-    </div>
+    <div id="contenedor__header"></div>
 
     <main class="main">
       <p class="main__text">
@@ -138,95 +95,10 @@
       </article>
     </section>
 
-    <footer class="footer">
-      <section class="footer__redes">
-        <h4 class="redes__titulo">Siguenos tambien en:</h4>
-        <div class="redes__iconos">
-          <a href="#" class="redes__link">
-            <img
-              src="../src/assets/icons/facebook.svg"
-              alt="icono de facebook"
-            />
-          </a>
-          <a href="#" class="redes__link">
-            <img
-              src="../src/assets/icons/instagram.svg"
-              alt="icono de instagram"
-            />
-          </a>
-          <a href="#" class="redes__link">
-            <img src="../src/assets/icons/twitter.svg" alt="icono de twitter" />
-          </a>
-          <a href="#" class="redes__link">
-            <img
-              src="../src/assets/icons/linkedin.svg"
-              alt="icono de linkedin"
-            />
-          </a>
-        </div>
-      </section>
+    <div id="contenedor__footer"></div>
+    <script src="./src/JS/Componentes/header.js"></script>
+    <script src="./src/JS/Componentes/footer.js"></script>
 
-      <section class="footer__contacto">
-        <div class="section__telefono">
-          <img
-            src="../src/assets/icons/cellphone.svg"
-            alt="icono de telefono"
-            class="telefono__icono"
-          />
-          <h4 class="telefono__titulo">Telefonos</h4>
-        </div>
-
-        <div class="contenedor__telefonos">
-          <h5>+505 8723-4567</h5>
-          <h5>+505 7698-1234</h5>
-          <h5>+505 2287-6543</h5>
-        </div>
-      </section>
-
-      <section class="section__horario">
-        <div class="horario__titulo">
-          <img
-            src="../src/assets/icons/calendario.svg"
-            alt="icono de calendario"
-            class="horario__icono"
-          />
-          <h5 class="horario__h5">Horarios</h5>
-        </div>
-
-        <h5 class="horario__text">Lunes - Viernes</h5>
-        <h5 class="horario__text">8:00AM - 5:00PM</h5>
-      </section>
-    </footer>
-
-    <script type="module" src="../src/JS/Index/main.js"></script>
-
-    <!-- ESTO QUE POLLAS ES?????? -->
-    <script>
-      const btnMenu = document.querySelector("#btn-menu");
-      const menu = document.querySelector("#menu");
-      let estadoMenu = false;
-
-      btnMenu.addEventListener("click", () => {
-        if (estadoMenu) {
-          menu.style.display = "none";
-          estadoMenu = false;
-          return;
-        }
-        menu.style.display = "flex";
-        estadoMenu = true;
-        return;
-      });
-
-      //Ete si salio de chat
-      function ocultarMenu() {
-        const menu = document.getElementById("menu");
-        if (window.innerWidth > 480) {
-          menu.style.display = "none";
-          estadoMenu = false;
-        }
-      }
-      window.addEventListener("resize", ocultarMenu);
-      ocultarMenu();
-    </script>
+    <script type="module" src="./src/JS/Index/main.js"></script>
   </body>
 </html>
