@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --colorIconoSection: brightness(0) saturate(100%) invert(23%) sepia(6%)
+    saturate(17%) hue-rotate(66deg) brightness(97%) contrast(104%);
+  --colorBody: #575656;
+  --colorHeader: #fb8500;
+  --colorLetra: #363636;
+  --colorHeaderLetra: #023047;
+  /*Cambia el color de los SVG*/
+  --colorIconoHeader: brightness(0) saturate(100%) invert(13%) sepia(17%)
+    saturate(6428%) hue-rotate(176deg) brightness(96%) contrast(98%);
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--colorBody);
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--colorHeader);
+}
+
+.footer__redes {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  .redes__titulo {
+    color: var(--colorHeaderLetra);
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-decoration-color: var(--colorHeaderLetra);
+  }
+
+  .redes__iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      filter: var(--colorIconoHeader);
+      transition: scale 1s ease-out;
+      &:active {
+        scale: 0.8;
+      }
+    }
+  }
+}
+
+.footer__contacto {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  .section__telefono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .telefono__titulo {
+      color: var(--colorHeaderLetra);
+      font-size: 1.5rem;
+    }
+    .telefono__icono {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      filter: var(--colorIconoHeader);
+    }
+  }
+
+  .contenedor__telefonos {
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+      color: var(--colorHeaderLetra);
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.section__horario {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+
+  .horario__titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    .horario__icono {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      filter: var(--colorIconoHeader);
+    }
+    .horario__h5 {
+      font-size: 1.5rem;
+      color: var(--colorHeaderLetra);
+    }
+  }
+
+  .horario__text {
+    font-size: 1.1rem;
+    color: var(--colorHeaderLetra);
+  }
+}
+
+@media (max-width: 888px) {
+  .footer {
+    gap: 20px;
+  }
+
+  .footer__redes {
+    .redes__titulo {
+      font-size: 1.3rem;
+    }
+    .redes__iconos {
+      gap: 15px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .footer__contacto {
+    .section__telefono {
+      .telefono__titulo {
+        font-size: 1.3rem;
+      }
+      .telefono__icono {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .contenedor__telefonos {
+      h5 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .section__horario {
+    gap: 15px;
+
+    .horario__titulo {
+      gap: 12px;
+
+      .horario__icono {
+        width: 30px;
+        height: 30px;
+      }
+      .horario__h5 {
+        font-size: 1.3rem;
+      }
+    }
+    .horario__text {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+  }
+
+  .footer__redes,
+  .footer__contacto,
+  .section__horario {
+    width: calc(100% / 3);
+  }
+}
+
+@media (max-width: 479px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__redes {
+    width: 100%;
+    align-items: start;
+    border-bottom: solid black 1px;
+
+    .redes__titulo {
+      width: 100%;
+      text-align: center;
+    }
+
+    .redes__iconos {
+      width: 100%;
+    }
+  }
+
+  .footer__contacto {
+    width: 100%;
+    border-bottom: solid black 1px;
+  }
+
+  .section__horario {
+    width: 100%;
+    align-items: center;
+  }
+}

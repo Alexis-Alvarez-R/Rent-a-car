@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/styles/style.css" />
+    <link rel="stylesheet" href="../src/styles/style.css" />
     <title>Rent a car</title>
   </head>
 
@@ -13,25 +13,26 @@
 
       <nav class="nav">
         <a href="#" class="link__nav">Inicio</a>
-        <a href="#" class="link__nav">Vehiculos</a
+        <a href="./Html/Vehiculos.html" class="link__nav" target="_blank"
+          >Vehiculos</a
         ><a href="#" class="link__nav">Nosotros</a>
-        <a href="./iniciarSesion.html" class="link__nav">Registrarte</a>
+        <a href="./Html/iniciarSesion.html" class="link__nav">Registrarte</a>
         <div class="social__media">
           <a href="#" class="link__social__media"
             ><img
-              src="./src/assets/icons/facebook.svg"
+              src="../src/assets/icons/facebook.svg"
               alt="icono de facebook"
               class="social__icon"
           /></a>
           <a href="#" class="link__social__media"
             ><img
-              src="./src/assets/icons/instagram.svg"
+              src="../src/assets/icons/instagram.svg"
               alt="icono de instagram"
               class="social__icon"
           /></a>
           <a href="#" class="link__social__media"
             ><img
-              src="./src/assets/icons/github.svg"
+              src="../src/assets/icons/github.svg"
               alt="icono de github"
               class="social__icon"
           /></a>
@@ -39,7 +40,7 @@
       </nav>
 
       <buttton id="btn-menu">
-        <img src="./src/assets/icons/menu.svg" alt="" class="img-menu-btn" />
+        <img src="../src/assets/icons/menu.svg" alt="" class="img-menu-btn" />
       </buttton>
     </header>
 
@@ -66,28 +67,28 @@
         <div class="carrucel">
           <section class="slider__section">
             <img
-              src="./src/assets/image/KiaWhite.png"
+              src="../src/assets/image/KiaWhite.png"
               alt=""
               class="img__carrucel"
             />
           </section>
           <section class="slider__section">
             <img
-              src="./src/assets/image/Coaster.png"
+              src="../src/assets/image/Coaster.png"
               alt=""
               class="img__carrucel"
             />
           </section>
           <section class="slider__section">
             <img
-              src="./src/assets/image/PradoDarkGray.png"
+              src="../src/assets/image/PradoDarkGray.png"
               alt=""
               class="img__carrucel"
             />
           </section>
           <section class="slider__section">
             <img
-              src="./src/assets/image/HiaceBus.png"
+              src="../src/assets/image/HiaceBus.png"
               alt=""
               class="img__carrucel"
             />
@@ -100,7 +101,7 @@
 
     <section class="section">
       <article class="section__article">
-        <img src="./src/assets/icons/precio.svg" alt="" class="section__img" />
+        <img src="../src/assets/icons/precio.svg" alt="" class="section__img" />
         <h4 class="section__titulo">El mejor precio garantizado</h4>
         <p class="section__parrafo">
           Obtenga el mejor precio cuando reserve directamente en
@@ -109,7 +110,11 @@
       </article>
 
       <article class="section__article">
-        <img src="./src/assets/icons/candado.svg" alt="" class="section__img" />
+        <img
+          src="../src/assets/icons/candado.svg"
+          alt=""
+          class="section__img"
+        />
         <h4 class="section__titulo">Contacto cero al alquilar un vehiculo</h4>
         <p class="section__parrafo">
           Generamos y firmamos contratos de alquiler remota y digitalmente.
@@ -120,7 +125,7 @@
 
       <article class="section__article">
         <img
-          src="./src/assets/icons/vehiculo.svg"
+          src="../src/assets/icons/vehiculo.svg"
           alt=""
           class="section__img"
         />
@@ -139,22 +144,22 @@
         <div class="redes__iconos">
           <a href="#" class="redes__link">
             <img
-              src="./src/assets/icons/facebook.svg"
+              src="../src/assets/icons/facebook.svg"
               alt="icono de facebook"
             />
           </a>
           <a href="#" class="redes__link">
             <img
-              src="./src/assets/icons/instagram.svg"
+              src="../src/assets/icons/instagram.svg"
               alt="icono de instagram"
             />
           </a>
           <a href="#" class="redes__link">
-            <img src="./src/assets/icons/twitter.svg" alt="icono de twitter" />
+            <img src="../src/assets/icons/twitter.svg" alt="icono de twitter" />
           </a>
           <a href="#" class="redes__link">
             <img
-              src="./src/assets/icons/linkedin.svg"
+              src="../src/assets/icons/linkedin.svg"
               alt="icono de linkedin"
             />
           </a>
@@ -164,7 +169,7 @@
       <section class="footer__contacto">
         <div class="section__telefono">
           <img
-            src="./src/assets/icons/cellphone.svg"
+            src="../src/assets/icons/cellphone.svg"
             alt="icono de telefono"
             class="telefono__icono"
           />
@@ -181,7 +186,7 @@
       <section class="section__horario">
         <div class="horario__titulo">
           <img
-            src="./src/assets/icons/calendario.svg"
+            src="../src/assets/icons/calendario.svg"
             alt="icono de calendario"
             class="horario__icono"
           />
@@ -193,8 +198,9 @@
       </section>
     </footer>
 
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="../src/JS/Index/main.js"></script>
 
+    <!-- ESTO QUE POLLAS ES?????? -->
     <script>
       const btnMenu = document.querySelector("#btn-menu");
       const menu = document.querySelector("#menu");
