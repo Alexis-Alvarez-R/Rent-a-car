@@ -1,32 +1,10 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --colorIconoSection: brightness(0) saturate(100%) invert(23%) sepia(6%)
-    saturate(17%) hue-rotate(66deg) brightness(97%) contrast(104%);
-  --colorBody: #575656;
-  --colorHeader: #fb8500;
-  --colorLetra: #363636;
-  --colorHeaderLetra: #023047;
-  /*Cambia el color de los SVG*/
-  --colorIconoHeader: brightness(0) saturate(100%) invert(13%) sepia(17%)
-    saturate(6428%) hue-rotate(176deg) brightness(96%) contrast(98%);
-}
-
-body {
-  font-family: sans-serif;
-  background-color: var(--colorBody);
-}
-
 .footer {
   width: 100%;
   padding: 20px 10px;
   display: flex;
   justify-content: space-around;
-  background-color: var(--colorHeader);
+  background-color: var(--colorHF);
+  font-family: sans-serif;
 }
 
 .footer__redes {
@@ -37,10 +15,10 @@ body {
   gap: 30px;
 
   .redes__titulo {
-    color: var(--colorHeaderLetra);
+    color: var(--colorLetrasHF);
     font-size: 1.5rem;
     text-decoration: underline;
-    text-decoration-color: var(--colorHeaderLetra);
+    text-decoration-color: var(--colorLetrasHF);
   }
 
   .redes__iconos {
@@ -53,7 +31,7 @@ body {
       width: 50px;
       height: 50px;
       object-fit: contain;
-      filter: var(--colorIconoHeader);
+      filter: var(--colorIconosHF);
       transition: scale 1s ease-out;
       &:active {
         scale: 0.8;
@@ -75,14 +53,14 @@ body {
     align-items: center;
 
     .telefono__titulo {
-      color: var(--colorHeaderLetra);
+      color: var(--colorLetrasHF);
       font-size: 1.5rem;
     }
     .telefono__icono {
       width: 50px;
       height: 50px;
       object-fit: contain;
-      filter: var(--colorIconoHeader);
+      filter: var(--colorIconosHF);
     }
   }
 
@@ -91,7 +69,7 @@ body {
     flex-direction: column;
 
     h5 {
-      color: var(--colorHeaderLetra);
+      color: var(--colorLetrasHF);
       margin-bottom: 15px;
       font-size: 1.1rem;
     }
@@ -115,17 +93,17 @@ body {
       width: 50px;
       height: 50px;
       object-fit: contain;
-      filter: var(--colorIconoHeader);
+      filter: var(--colorIconosHF);
     }
     .horario__h5 {
       font-size: 1.5rem;
-      color: var(--colorHeaderLetra);
+      color: var(--colorLetrasHF);
     }
   }
 
   .horario__text {
     font-size: 1.1rem;
-    color: var(--colorHeaderLetra);
+    color: var(--colorLetrasHF);
   }
 }
 
