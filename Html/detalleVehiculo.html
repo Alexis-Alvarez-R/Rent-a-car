@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/styles/style.css" />
+    <link rel="stylesheet" href="../src/styles/detalleVehiculo.css" />
+    <title>Detalle vehiculo</title>
+  </head>
+  <body>
+    <div id="contenedor__header"></div>
+    <main class="main">
+      <div class="formulario">
+        <div class="formgroup">
+          <div class="formfields">
+            <label for="fechaInicio">Fecha Retiro: </label>
+            <input type="date" name="fechaInicio" id="fechaInicio" />
+          </div>
+
+          <div class="formfields">
+            <label for="fechaFinal">Fecha Devolucion: </label>
+            <input type="date" name="fechaFinal" id="fechaFinal" />
+          </div>
+        </div>
+
+        <div class="formgroup">
+          <div class="formfields">
+            <label for="horaRecoleccion">Hora de Recoleccion: </label>
+            <input type="time" name="horaRecoleccion" id="horaRecoleccion" />
+          </div>
+
+          <div class="formfields">
+            <label for="" horaDevolucion>Hora de Devolucion: </label>
+            <input type="time" name="horaDevolucion" id="horaDevolucion" />
+          </div>
+        </div>
+
+        <div class="formgroup">
+          <div class="formfields codigo">
+            <label for="codigo">Codigo Promocional</label>
+            <input
+              type="text"
+              name="codigo"
+              id="codigo"
+              placeholder="Escribi tu codigo"
+            />
+          </div>
+        </div>
+
+        <div class="buttom">
+          <buttom class="buttom__reserva">Reservar</buttom>
+        </div>
+      </div>
+
+      <div class="contenedor__detalles">
+        <div class="contenedor__car">
+          <div class="car__data">
+            <!-- Marca y modelo -->
+            <p class="text">Toyota yaris</p>
+            <!-- Categoria  -->
+            <p class="sub__text"><span>Categoria:</span> Sedan</p>
+
+            <p class="descripcion">
+              Yaris te permite disfrutarlo solo o en la mejor compañia:
+              espacioso para la familia y divertido para ti.
+            </p>
+
+            <p class="precio__titulo">PRECIO DESDE</p>
+
+            <p class="precio">$85</p>
+          </div>
+
+          <img
+            src="../src/assets/image/ToyotaYarisBlack.png"
+            alt="toyota yaris"
+            class="img"
+          />
+        </div>
+        <table class="general">
+          <tr>
+            <th colspan="6">DATOS GENERALES</th>
+          </tr>
+          <tr>
+            <th>N.Asientos</th>
+            <th>N.Puertas</th>
+            <th>Color</th>
+            <th>Año</th>
+            <th>transmision</th>
+            <th>Estado</th>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>4</td>
+            <td>Negro</td>
+            <td>2024</td>
+            <td>Automatica</td>
+            <td>Disponible</td>
+          </tr>
+        </table>
+
+        <div class="tablas__secundarias">
+          <table class="mecanicos">
+            <tr>
+              <th colspan="2">DATOS MECANICOS</th>
+            </tr>
+            <tr>
+              <th>Motor</th>
+              <th>1.6</th>
+            </tr>
+            <tr>
+              <th>Potencia</th>
+              <th>100</th>
+            </tr>
+            <tr>
+              <th>Velocidad Max</th>
+              <th>160km</th>
+            </tr>
+            <tr>
+              <th>Capacidad de carga</th>
+              <th>100kg</th>
+            </tr>
+            <tr>
+              <th>Capacida de litros</th>
+              <th>45ltr</th>
+            </tr>
+            <tr>
+              <th>Combustible</th>
+              <th>Gasolina</th>
+            </tr>
+          </table>
+
+          <table class="tegnologia">
+            <tr>
+              <th colspan="2">DATOS TECNOLOGICOS</th>
+            </tr>
+            <tr>
+              <th>AC</th>
+              <th>SI</th>
+            </tr>
+            <tr>
+              <th>Sensores</th>
+              <th>SI</th>
+            </tr>
+            <tr>
+              <th>Camaras</th>
+              <th>SI</th>
+            </tr>
+          </table>
+
+          <table class="seguridad">
+            <tr>
+              <th colspan="2">DATOS DE SEGURIDAD</th>
+            </tr>
+
+            <tr>
+              <th>Airbags</th>
+              <th>4</th>
+            </tr>
+            <tr>
+              <th>ABS</th>
+              <th>SI</th>
+            </tr>
+            <tr>
+              <th>Control estabilidad</th>
+              <th>SI</th>
+            </tr>
+            <tr>
+              <th>Asistencia de frenado</th>
+              <th>SI</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <div id="contenedor__footer"></div>
+
+    <script src="../src/JS/Componentes/header.js"></script>
+    <script src="../src/JS/Componentes/footer.js"></script>
+  </body>
+</html>

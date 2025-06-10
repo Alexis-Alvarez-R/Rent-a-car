@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#023047, gray);
+
+  width: 100%;
+}
+
+.formulario {
+  align-self: flex-start;
+  margin-top: 20px;
+  width: 30%;
+  border: 1px solid #023047;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background-image: linear-gradient(#b2bec6, lightgray);
+
+  padding: 10px;
+}
+
+.formgroup {
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+  gap: 7px;
+  color: #023047;
+  border: 1px solid #023047;
+
+  .codigo {
+    width: 80%;
+  }
+}
+
+.formfields {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+
+  padding: 10px;
+
+  input {
+    font-family: sans-serif;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    transition: outline 0.1s ease-in-out;
+
+    &:focus {
+      outline: 3px solid #023047;
+    }
+
+    &::placeholder {
+      font-size: 1rem;
+      color: black;
+    }
+  }
+}
+
+.buttom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttom__reserva {
+  width: 50%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 10px;
+  background-color: #023047;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+
+  user-select: none;
+
+  transition: scale 0.5s ease-out;
+
+  &:active {
+    filter: brightness(130%);
+    scale: 0.9;
+  }
+
+  &:hover {
+    filter: brightness(130%);
+  }
+}
+
+.contenedor__detalles {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  gap: 20px;
+  width: 70%;
+}
+
+.contenedor__car {
+  display: flex;
+  background-image: linear-gradient(#b2bec6, lightgray);
+
+  img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.car__data {
+  width: 50%;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #023047;
+}
+
+.text {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.sub__text {
+  font-size: 1.5rem;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.descripcion {
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+}
+
+.precio__titulo {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.precio {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.general,
+.mecanicos,
+.tegnologia,
+.seguridad {
+  width: 100%;
+  color: white;
+  border: 1px solid white;
+  border-collapse: collapse;
+  text-align: center;
+  background-image: linear-gradient(#023047, gray);
+}
+
+.tablas__secundarias {
+  display: flex;
+  gap: 10px;
+}
+
+.mecanicos,
+.tegnologia,
+.seguridad {
+  width: 33%;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid white;
+}
+
+@media (479px < width <= 880px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .formulario {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .contenedor__detalles {
+    width: 100%;
+  }
+
+  .contenedor__car {
+    img {
+      width: 55%;
+    }
+  }
+
+  .text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (width < 479px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .formulario {
+    width: 100%;
+  }
+
+  .contenedor__detalles {
+    width: 100%;
+  }
+
+  .contenedor__car {
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+  }
+
+  .car__data {
+    width: 100%;
+  }
+
+  .text {
+    font-size: 2rem;
+  }
+
+  .sub__text {
+    font-size: 1rem;
+  }
+
+  .descripcion {
+    font-size: 0.8rem;
+  }
+
+  .precio__titulo {
+    font-size: 1rem;
+  }
+
+  .precio {
+    font-size: 2rem;
+  }
+
+  .general,
+  .mecanicos,
+  .tegnologia,
+  .seguridad {
+    font-size: 0.5rem;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+}

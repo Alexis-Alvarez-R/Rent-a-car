@@ -1,8 +1,10 @@
-fetch("/Html/Header.html")
-  .then((response) => response.text())
-  .then((html) => {
+async function cargarHeader() {
+  try {
+    const response = await fetch("/Html/Header.html");
+    const html = await response.text();
     document.getElementById("contenedor__header").innerHTML = html;
 
+    // Lógica del menú
     const btnMenu = document.querySelector("#btn-menu");
     const menu = document.querySelector("#menu");
     let estadoMenu = false;
@@ -15,20 +17,21 @@ fetch("/Html/Header.html")
       }
       menu.style.display = "flex";
       estadoMenu = true;
-      return;
     });
 
-    //Ete si salio de chat
     function ocultarMenu() {
-      const menu = document.getElementById("menu");
       if (window.innerWidth > 480) {
         menu.style.display = "none";
         estadoMenu = false;
       }
     }
+
     window.addEventListener("resize", ocultarMenu);
     ocultarMenu();
-  })
-  .catch((error) => {
+  } catch (error) {
     console.error("Error al cargar el header:", error);
-  });
+  }
+}
+
+// Ejecutar
+cargarHeader();
