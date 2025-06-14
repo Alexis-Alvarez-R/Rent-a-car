@@ -1,3 +1,15 @@
+@font-face {
+  font-family: aileronBlack;
+  src: url(../assets/fonts/Aileron-BlackItalic.otf) format("woff2");
+  src: url(../assets/fonts/Aileron-BlackItalic.otf) format("woff");
+}
+
+@font-face {
+  font-family: aileronItalic;
+  src: url(../assets/fonts/Aileron-Italic.otf) format("woff2");
+  src: url(../assets/fonts/Aileron-Italic.otf) format("woff");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -15,7 +27,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "aileronItalic", sans-serif;
   background-color: var(--colorBody);
 }
 
@@ -32,8 +44,10 @@ body {
   padding: 20px 30px;
   margin-right: auto;
   width: 40%;
+  font-family: "aileronBlack", sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
+  word-spacing: 9px;
   background: #023047;
   background: linear-gradient(to right, #b2bec6 0%, #023047 100%);
   background-clip: text;
@@ -76,6 +90,9 @@ body {
 .question {
   padding: 30px;
   width: 100%;
+  font-family: "aileronBlack", sans-serif;
+  word-spacing: 5px;
+
   text-align: center;
 
   background-color: #b2bec6;
@@ -99,6 +116,8 @@ body {
   align-items: stretch;
   gap: 30px;
   margin-bottom: 20px;
+
+  font-family: "aileronItalic", sans-serif;
 }
 
 .section__article {
@@ -140,6 +159,7 @@ body {
   }
 
   .section__titulo {
+    font-family: "aileronBlack", sans-serif;
     font-size: 1.3rem;
     font-weight: 800;
     text-align: center;

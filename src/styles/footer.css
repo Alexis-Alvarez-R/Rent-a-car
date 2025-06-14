@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-around;
   background-color: var(--colorHF);
-  font-family: sans-serif;
+  font-family: "aileronBlack", sans-serif;
 }
 
 .footer__redes {
