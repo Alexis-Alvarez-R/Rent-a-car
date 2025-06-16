@@ -22,6 +22,8 @@ export function enviarForm() {
     e.preventDefault();
   });
 
+  let registroExitoso = false;
+
   botonEnviar.addEventListener("click", () => {
     const dataEntries = Object.entries(formData);
 
@@ -39,6 +41,7 @@ export function enviarForm() {
           "Content-Type": "application/json",
         },
         method: "POST",
+        credentials: "include",
         body: JSON.stringify(data),
       });
 
@@ -47,6 +50,7 @@ export function enviarForm() {
         .then((data) => {
           parrafoDialog.textContent = data.mensaje;
           dialog.showModal();
+          registroExitoso = data.isRegistrado;
           if (data.isRegistrado) {
             imagenDialog.setAttribute(
               "src",
@@ -62,5 +66,10 @@ export function enviarForm() {
     }
   });
 
-  btnCerrar.addEventListener("click", () => dialog.close());
+  btnCerrar.addEventListener("click", () => {
+    dialog.close();
+    if (registroExitoso) {
+      window.location.href = "../index.html";
+    }
+  });
 }

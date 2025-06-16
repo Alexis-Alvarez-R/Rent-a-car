@@ -7,11 +7,12 @@
     <title>Inicia Sesion</title>
   </head>
   <body>
-    <form
-      id="form-iniciar-sesion"
-      action="http://localhost:3000/iniciarSesion"
-      method="post"
-    >
+    <dialog id="dialog">
+      <img src="" alt="" id="dialog__img" />
+      <p id="dialog__p"></p>
+      <button id="cerrar-dialog" class="btn-dialog">Cerrar</button>
+    </dialog>
+    <form id="form-iniciar-sesion">
       <h3>Iniciar sesion</h3>
       <label for="usuario">Ingrece su usuario</label>
       <input type="text" id="usuario" name="nombreUsuario" />
@@ -19,9 +20,10 @@
       <label for="contraseña">Ingrese su contraseña</label>
       <input type="password" id="contraseña" name="contrasena" />
       <nav id="buttons-opciones">
-        <button>Ingresar</button>
+        <button type="submit">Ingresar</button>
         <a href="./registrar.html">Registrarse</a>
       </nav>
     </form>
+    <script type="module" src="../src/JS/IniciarSesion/main.js"></script>
   </body>
 </html>

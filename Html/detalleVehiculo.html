@@ -10,7 +10,7 @@
   <body>
     <div id="contenedor__header"></div>
     <main class="main">
-      <form action="http://localhost:3000/postRent" method="post">
+      <form>
         <div class="formulario">
           <div class="formgroup">
             <div class="formfields">
@@ -48,7 +48,7 @@
             </div>
           </div>
 
-          <div class="formgroup">
+          <div class="formgroup" id="descuentos">
             <div class="formfields codigo">
               <label for="codigo">Codigo Promocional</label>
               <input
@@ -184,8 +184,8 @@
 
     <div id="contenedor__footer"></div>
 
+    <script type="module" src="../src/JS/DetalleVehiculo/main.js"></script>
     <script src="../src/JS/Componentes/header.js"></script>
     <script src="../src/JS/Componentes/footer.js"></script>
-    <script type="module" src="../src/JS/DetalleVehiculo/main.js"></script>
   </body>
 </html>

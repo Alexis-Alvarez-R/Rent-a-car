@@ -3,6 +3,7 @@ import { cargarCiudades } from "./fetchCiudades.js";
 export function cargarCiudadesForm() {
   document.addEventListener("DOMContentLoaded", async () => {
     const lista = await cargarCiudades();
+    console.log(lista);
 
     const select = document.getElementById("select");
 

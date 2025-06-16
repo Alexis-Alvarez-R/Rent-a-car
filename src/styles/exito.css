@@ -1,0 +1,234 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --color-body: #023047;
+  --color-form: #ebe0d359;
+  --color-button: #c7cbd8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    100deg,
+    rgba(224, 67, 67, 1) 0%,
+    rgba(94, 109, 184, 1) 38%,
+    rgba(109, 150, 201, 1) 62%,
+    rgba(112, 90, 196, 1) 83%,
+    rgba(106, 96, 209, 1) 100%
+  );
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 600;
+}
+#dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4px 10px;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 18px;
+
+  &::backdrop {
+    background-color: #242424a6;
+  }
+}
+
+#dialog[open] {
+  animation: show-modal 0.7s ease-in;
+}
+@keyframes show-modal {
+  0% {
+    left: 50%;
+    top: 50%;
+    opacity: 0.6;
+    transform: translate(-50%, -260%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+#dialog__img {
+  width: 20%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+#dialog__p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  color: black;
+  font-size: 18px;
+  text-align: center;
+}
+#cerrar-dialog {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: green;
+  position: relative;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background-color: rgb(20, 160, 20);
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  gap: 40px;
+  height: 100vh;
+}
+
+h1 {
+  color: whitesmoke;
+  display: block;
+  font-size: 48px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+.detalles-facturacion {
+  position: relative;
+  padding: 30px 30px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 900px;
+  background-color: #ffffffe5;
+  border-radius: 18px;
+  box-shadow: 3px 2px 5px 2px black;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    box-shadow: 3px 2px 4px 6px black;
+  }
+
+  & > h2 {
+    padding: 0 10px;
+    text-align: start;
+  }
+  .detalles {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .detalle-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .span-start {
+      padding-left: 0;
+      display: flex;
+      width: 40%;
+    }
+    span {
+      padding-left: 10px;
+      width: 60%;
+      display: flex;
+    }
+    .detalles-cliente {
+      padding: 4px 8px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      color: whitesmoke;
+      background-color: rgb(134, 134, 134);
+      border-radius: 12px;
+
+      div {
+        display: flex;
+      }
+    }
+
+    .detalles-fecha {
+      padding: 4px 8px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      div {
+        display: flex;
+      }
+    }
+
+    .detalles-cobro {
+      padding: 4px 8px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      color: whitesmoke;
+      background-color: rgb(134, 134, 134);
+      border-radius: 12px;
+
+      div {
+        display: flex;
+      }
+    }
+  }
+
+  .detalle-img {
+    background-color: #9e9e9e;
+    border-radius: 12px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        width: 110%;
+      }
+    }
+  }
+
+  .detalle-info {
+    width: 40%;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(165, 165, 165);
+    left: 0;
+    bottom: -14%;
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    width: 40%;
+    border-radius: 12px;
+    transition: all 0.4s ease-out;
+
+    &:hover {
+      background-color: #ffffffe5;
+    }
+  }
+}

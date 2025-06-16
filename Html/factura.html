@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/styles/exito.css" />
+  </head>
+  <body>
+    <main class="main_exitoso">
+      <dialog id="dialog">
+        <img src="" alt="" id="dialog__img" />
+        <p id="dialog__p"></p>
+        <button id="cerrar-dialog" class="btn-dialog">Cerrar</button>
+      </dialog>
+
+      <h1>Detalles Facturacion</h1>
+      <section class="detalles-facturacion">
+        <h2>Factura</h2>
+        <div class="detalles">
+          <div class="detalle-info">
+            <div class="detalles-cliente">
+              <div>
+                <span class="span-start">Renta Nro.</span
+                ><span class="id-renta">##</span>
+              </div>
+              <div>
+                <span class="span-start">Cliente Id</span
+                ><span class="id-cliente">##</span>
+              </div>
+              <div>
+                <span class="span-start">Nombre</span
+                ><span class="nombre">##### #####</span>
+              </div>
+              <div>
+                <span class="span-start">Identidad</span>
+                <span class="cedula">###-######-#####</span>
+              </div>
+            </div>
+            <div class="detalles-fecha">
+              <div>
+                <span class="span-start">Fecha Incial: </span
+                ><span class="fInicio">####-##-##</span>
+              </div>
+              <div>
+                <span class="span-start">Fecha Final </span
+                ><span class="fFinal">####-##-##</span>
+              </div>
+            </div>
+            <div class="detalles-cobro">
+              <div>
+                <span class="span-start">Descuento %</span
+                ><span class="descuento-porcentaje">##</span>
+              </div>
+              <div>
+                <span class="span-start">Descuento</span
+                ><span class="descuento-valor">###</span>
+              </div>
+              <div>
+                <span class="span-start">Subtotal</span
+                ><span class="sub-total">###</span>
+              </div>
+              <div>
+                <span class="span-start">Total</span
+                ><span class="total">###</span>
+              </div>
+            </div>
+          </div>
+          <div class="detalle-img">
+            <img class="det-img" src="" alt="" />
+          </div>
+        </div>
+        <a href="../index.html">Regresar</a>
+      </section>
+    </main>
+    <script type="module" src="../src/JS/stripe/factura.js"></script>
+  </body>
+</html>

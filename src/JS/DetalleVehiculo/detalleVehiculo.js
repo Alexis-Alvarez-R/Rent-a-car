@@ -2,23 +2,56 @@ export async function detalleVehiculo() {
   try {
     const id_vehiculo = localStorage.getItem("id_vehiculo");
     const fetchVehiculo = await fetch(
-      `http://localhost:3000/getVehiculo?id_vehiculo=${id_vehiculo}`
+      `http://localhost:3000/getVehiculo?id_vehiculo=${id_vehiculo}`,
+      {
+        method: "GET",
+        credentials: "include",
+      }
     );
+
+    console.log(fetchVehiculo);
+
     if (!fetchVehiculo.ok) {
       if (fetchVehiculo.status == 404) {
         alert("Vehiculo no encontrado");
       }
+
+      if (fetchVehiculo.status == 401) {
+        console.log(window.Location.href);
+        console.log("Ando aqui");
+        window.location.href = "./iniciarSesion.html";
+        return;
+      }
     }
+    document.body.style.display = "block";
+
+    // window.location.href = "../../../HTML/detalleVehiculo.html";
+
+    const fetchPromo = await fetch("http://localhost:3000/getDescuento", {
+      method: "GET",
+      credentials: "include",
+    });
+    const promo = await fetchPromo.json();
+    console.log(promo);
+    if (!promo.isValid) {
+      const $descuentos = document.querySelector("#descuentos");
+      console.log($descuentos);
+      const $codigo = document.querySelector("#codigo");
+      $codigo.disabled = true;
+      $descuentos.style.display = "none";
+    }
+
     const vehiculoJson = await fetchVehiculo.json();
     console.log(vehiculoJson);
     const vehiculo = vehiculoJson.vehiculo;
     const $contendedorDetalles = document.querySelector(
       ".contenedor__detalles"
     );
+
+    const $form = document.querySelector("form");
     const $text = $contendedorDetalles.querySelector(".text");
     const $subText = $contendedorDetalles.querySelector(".sub__text");
     const $subTextSpan = $subText.querySelector("span");
-    const parrafo = document.querySelector(".sub__text");
 
     const $descripcion = $contendedorDetalles.querySelector(".descripcion");
     const $precio = $contendedorDetalles.querySelector(".precio");
@@ -88,7 +121,7 @@ export async function detalleVehiculo() {
     $potencia.textContent = vehiculo.mecanica.potenciaHP;
     $velocidadMax.textContent = `${vehiculo.mecanica.velocidadMaximaKm}km`;
     $carga.textContent = `${vehiculo.mecanica.capacidadCargaKg || 0}kg`;
-    $litros.textContent = `${vehiculo.mecanica.capacidadTanqueLt || 0}ltr`;
+    $litros.textContent = `${vehiculo.mecanica.capacidadLitrosTanque || 0}ltr`;
     $combustible.textContent = vehiculo.mecanica.tipoCombustible || "Gasolina";
 
     // Tecnología
@@ -113,7 +146,12 @@ export async function detalleVehiculo() {
         const hoy = new Date().toISOString().split("T")[0];
         console.log(hoy);
 
+        if (event.target.value < hoy) {
+          event.target.value = "";
+          alert("Fecha de Devoluvion incorrecta");
+        }
         if (event.target.value == hoy) {
+          event.target.value = "";
           alert("La devolucion no puede ser el mismo dia del alquiler");
         }
       });
@@ -146,5 +184,33 @@ export async function detalleVehiculo() {
           e.target.value = "";
         }
       });
+
+    $form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const formData = new FormData($form);
+      const urlParams = new URLSearchParams(formData);
+      urlParams.append("id_Vehiculo", localStorage.getItem("id_vehiculo"));
+      console.log(localStorage);
+
+      const fetchReserva = await fetch("http://localhost:3000/postRenta", {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: urlParams.toString(),
+      });
+
+      const repuesta = await fetchReserva.json();
+
+      if (!repuesta.Repuesta.isValid) {
+        alert(repuesta.Repuesta.mensaje);
+        return;
+      }
+      console.log(repuesta);
+      localStorage.setItem("imgV", $img.getAttribute("src"));
+      localStorage.setItem("facturaId", repuesta.reservaId);
+      window.location.href = repuesta.checkoutUrl;
+    });
   } catch (e) {}
 }

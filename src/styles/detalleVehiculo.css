@@ -22,6 +22,9 @@ td.value_color {
 button {
   border: none;
 }
+body {
+  display: none;
+}
 
 .main {
   border: 1px solid white;
@@ -136,7 +139,7 @@ form {
 
   img {
     width: 50%;
-    height: auto;
+    min-height: 300px;
     object-fit: contain;
   }
 }

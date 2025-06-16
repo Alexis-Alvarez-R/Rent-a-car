@@ -1,18 +1,17 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  
+
   --color-body: #023047;
   --color-form: #ebe0d359;
   --color-button: #c7cbd8;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
-
 }
 
-body{
+body {
   background-color: var(--color-body);
   min-height: 1200px;
   display: flex;
@@ -22,11 +21,11 @@ body{
   gap: 40px;
 }
 
-h3{
+h3 {
   font-size: 28px;
 }
 
-form{
+form {
   box-sizing: border-box;
   padding: 34px 12px;
   width: 80%;
@@ -43,29 +42,29 @@ form{
   border: solid white 3px;
   border-radius: 14px;
 
-
-  button{
+  button {
     width: 80%;
     padding: 14px;
     background-color: var(--color-button);
   }
 }
 
-.input-box{
+.input-box {
   width: 80%;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-label{
+label {
   width: 100%;
   text-align: start;
   font-size: 18px;
   font-weight: 600;
 }
 
-input, select{
+input,
+select {
   box-sizing: border-box;
   width: 100%;
   height: 40px;
@@ -73,76 +72,87 @@ input, select{
   border-radius: 8px;
 }
 
-
-#dialog{
+#dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 4px 10px;
-  min-width: 300px; 
+  min-width: 300px;
   background-color: white;
   border-radius: 18px;
-  
-  &::backdrop{
+
+  &::backdrop {
     background-color: #242424a6;
   }
 }
 
-#dialog[open]{
-  animation: show-modal 0.4s linear;
+#dialog[open] {
+  animation: show-modal 0.7s ease-in;
 }
 @keyframes show-modal {
-  0%{
-    transform: translateY(-100%);
+  0% {
+    left: 50%;
+    top: 50%;
+    opacity: 0.6;
+    transform: translate(-50%, -260%);
   }
-  100%{
-    transform: translateY(0%);
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
-  
 }
-#dialog__img{
+#dialog__img {
   width: 20%;
   position: relative;
   left: 50%;
   top: 50%;
   transform: translateX(-50%);
 }
-#dialog__p{
+#dialog__p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  min-height: 100px;
   color: black;
   font-size: 18px;
   text-align: center;
 }
-#cerrar-dialog{
+#cerrar-dialog {
+  width: 100%;
   padding: 10px 20px;
   background-color: green;
   position: relative;
-  left: 220px;
   border-radius: 8px;
-}
+  transition: all 0.4s ease;
 
+  &:hover {
+    background-color: rgb(20, 160, 20);
+  }
+}
 
 /* En tablet se ve bien con las medidas anteriores */
 
-
-@media(max-width: 480px){
-
-
-
-  form{
+@media (max-width: 480px) {
+  form {
     gap: 18px;
 
-    button{
+    button {
       width: 90%;
     }
   }
 
-  .input-box{
+  .input-box {
     width: 90%;
   }
 
-  label{
+  label {
     font-size: 14px;
   }
 
-  input, select{
+  input,
+  select {
     padding: 8px;
   }
 }
